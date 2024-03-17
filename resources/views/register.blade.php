@@ -98,25 +98,28 @@
   </head>
   <body class="d-flex align-items-center py-4 bekron">
 <main class="form-signin w-100 m-auto">
+
   <h1 class="h2 mb-3 fw-bold text-center">SIGN-UP</h1>
-  <form>
+
+  <form action="/register" method="post">
+    @csrf
     <div class="form-floating">
-      <input type="text" name="name" class="form-control" id="name" placeholder="Name">
+      <input type="text" name="name" class="form-control @error('name') is-invalid  @enderror" id="name" placeholder="Name" required value="{{ old('name') }}">
       <label for="name">Name</label>
     </div>
     <div class="form-floating">
-      <input type="text" name="username" class="form-control" id="username" placeholder="Username">
+      <input type="text" name="username" class="form-control @error('username') is-invalid @enderror" id="username" placeholder="Username" required value="{{ old('username') }}">
       <label for="username">Username</label>
     </div>
     <div class="form-floating">
-      <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-      <label for="floatingInput">Email</label>
+      <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="name@example.com" required value="{{ old('email') }}">
+      <label for="email">Email</label>
     </div>
     <div class="form-floating">
-      <input type="password" name="password" class="form-control" id="password" placeholder="Password">
+      <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" id="password" placeholder="Password" required>
       <label for="password">Password</label>
     </div>
-    <button class="btn btn-success w-100 py-2" type="submit"><a href="/" class="ling text-white">Sign-Up</a></button>
+    <button class="btn btn-success w-100 py-2" type="submit">Sign-Up</button>
     <p class="text-center mt-3">Have Account? <a href="/" class="ling text-success">Login</a></p>
     <p class="mt-5 mb-3 text-body-secondary">&copy; Izzah XII A</p>
   </form>
