@@ -44,6 +44,10 @@
                     <label for="telepon" class="form-label">Nomor Telepon</label>
                     <input type="number" name="notelepon" class="form-control" id="telepon" required value="{{ $data->notelepon }}">
                 </div>
+                <div class="mb-3">
+                    <label for="foto" class="form-label">Masukkan Foto</label>
+                    <input type="file" name="foto" class="form-control" required>
+                </div>
                 <button type="submit" class="btn btn-success">Edit</button>
             </form>
             </div>

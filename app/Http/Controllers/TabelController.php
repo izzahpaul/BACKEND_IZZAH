@@ -39,6 +39,11 @@ class TabelController extends Controller
     {
         $data = Tabel::find($id);
         $data->update($request->all());
+        if($request->hasFile('foto')){
+            $request->file('foto')->move('fototabel/', $request->file('foto')->getClientOriginalName());
+            $data->foto = $request->file('foto')->getClientOriginalName();
+            $data->save();
+        }
 
         return redirect()->route('tabel')->with('success', 'Data Berhasil diupdate Saudaraa!');
     }
