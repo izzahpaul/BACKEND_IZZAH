@@ -14,18 +14,18 @@
 <nav class="bg-success">
 <div class="container">
     <header class="d-flex justify-content-center py-3">
-      <ul class="nav nav-pills fw-bold">
+    <ul class="nav nav-pills fw-bold">
         <li class="nav-item active"><a href="/dashboard" class="nav-link text-white" aria-current="page">Home</a></li>
-        <li class="nav-item"><a href="/tabel" class="nav-link text-white">Tabel Data</a></li>
-        <li class="nav-item"><a href="#" class="nav-link text-white">Tambah Data</a></li>
+        <li class="nav-item"><a href="/tabel" class="nav-link text-white">Gallery</a></li>
+        <li class="nav-item"><a href="/tambah" class="nav-link text-white">Tambah Foto</a></li>
         <!-- <li class="nav-item"><a href="#" class="nav-link text-white">FAQs</a></li> -->
         <li class="nav-item"><a href="/" class="nav-link text-danger">log out</a></li>
       </ul>
     </header>
   </div>
 </nav>
-<div class="container mt-4">
-<h1 class="fw-bold">Welcome Back Izzah</h1>
+<div class="container mt-5">
+<h1 class="fw-bold d-flex justify-content-center">Welcome Back Master!</h1>
 </div>
 <!-- js bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

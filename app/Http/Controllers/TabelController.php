@@ -26,7 +26,7 @@ class TabelController extends Controller
             $data->foto = $request->file('foto')->getClientOriginalName();
             $data->save();
         }
-        return redirect()->route('tabel')->with('success', 'Data Berhasil ditambahkan Saudaraa!');
+        return redirect()->route('tabel')->with('success', 'Foto Berhasil ditambahkan Saudaraa!');
     }
 
     public function edit($id)
@@ -45,7 +45,7 @@ class TabelController extends Controller
             $data->save();
         }
 
-        return redirect()->route('tabel')->with('success', 'Data Berhasil diupdate Saudaraa!');
+        return redirect()->route('tabel')->with('success', 'Foto Berhasil diupdate Saudaraa!');
     }
 
     public function hapus($id)
@@ -53,6 +53,6 @@ class TabelController extends Controller
         $data = Tabel::find($id);
         $data->delete();
 
-        return redirect()->route('tabel')->with('success', 'Data Berhasil dihapus Saudaraa!');
+        return redirect()->route('tabel')->with('success', 'Foto Berhasil dihapus Saudaraa!');
     }
 }

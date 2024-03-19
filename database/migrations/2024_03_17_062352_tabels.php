@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('tabels', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->bigInteger('notelepon');
             $table->string('foto');
             $table->timestamps();
         });
