@@ -43,22 +43,15 @@
     </tr>
   </thead>
   <tbody>
-    @php
-      $no = 1;
-    @endphp 
-    @foreach ($data as $row)
     <tr>
-      <th scope="row">{{ $no++ }}</th>
-      <td>{{ $row->nama }}</td>
+      <th scope="row">1</th>
+      <td>izzah</td>
+      <td> isi foto </td>
       <td>
-      <img src="{{ asset('fototabel/'.$row->foto) }}" class="gambar">
-      </td>
-      <td>
-        <a href="/edit/{{ $row->id }}" class="btn btn-success">Edit</a>
-        <a href="/hapus/{{ $row->id }}" class="btn btn-danger">Hapus</a>
+        <a href="/edit" class="btn btn-success">Edit</a>
+        <a href="/hapus" class="btn btn-danger">Hapus</a>
       </td>
     </tr>
-    @endforeach
   </tbody>
 </table>
 </div>
