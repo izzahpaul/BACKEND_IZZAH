@@ -17,32 +17,23 @@ use App\Http\Controllers\TabelController;
 |
 */
 
-Route::get('/', function () {
-    return view('login');
-});
+// Route::get('/', function () {
+//     return view('login');
+// });
+Route::get('/', [Login::class, 'index']);
+Route::post('/', [Login::class, 'store']);
 
-Route::get('/register', function () {
-    return view('register');
-});
-
-// Route::get('/', [Login::class, 'index']);
-// Route::post('/', [Login::class, 'store']);
-
-// Route::get('/register', [Register::class, 'index']);
-// Route::post('/register', [Register::class, 'store']);
+Route::get('/register', [Register::class, 'index']);
+Route::post('/register', [Register::class, 'store']);
 
 Route::get('/dashboard', function () {return view('dashboard');});
 
-Route::get('/tabel', function () {return view('tabel');});
+Route::get('/tabel', [TabelController::class, 'tabel'])->name('tabel');
 
-Route::get('/tambah', function () {return view('tambah');});
+Route::get('/tambah', [TabelController::class, 'tambah'])->name('tambah');
+Route::post('/insert', [TabelController::class, 'insert'])->name('insert');
 
-// Route::get('/tabel', [TabelController::class, 'tabel'])->name('tabel');
+Route::get('/edit/{id}', [TabelController::class, 'edit'])->name('edit');
+Route::post('/ubah/{id}', [TabelController::class, 'ubah'])->name('ubah');
 
-// Route::get('/tambah', [TabelController::class, 'tambah'])->name('tambah');
-// Route::post('/insert', [TabelController::class, 'insert'])->name('insert');
-
-// Route::get('/edit/{id}', [TabelController::class, 'edit'])->name('edit');
-// Route::post('/ubah/{id}', [TabelController::class, 'ubah'])->name('ubah');
-
-// Route::get('/hapus/{id}', [TabelController::class, 'hapus'])->name('hapus');
+Route::get('/hapus/{id}', [TabelController::class, 'hapus'])->name('hapus');

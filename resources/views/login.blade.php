@@ -117,7 +117,7 @@
       <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" id="password" placeholder="Password" required>
       <label for="password">Password</label>
     </div>
-    <a  href="/dashboard" class="btn btn-success w-100 py-2" type="submit">Login</a>
+    <button class="btn btn-success w-100 py-2" type="submit">Login</button>
     <p class="text-center mt-3">Don't Have Account?<a href="register" class="ling text-success">Sign-Up</a></p>
     <p class="mt-5 mb-3 text-body-secondary">&copy; Izzah XII A</p>
   </form>
